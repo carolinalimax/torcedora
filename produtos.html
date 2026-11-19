@@ -218,87 +218,12 @@
       aspect-ratio: .82;
       overflow: hidden;
       border: 1px solid var(--ink);
-      background: var(--blue);
+      background: var(--white);
       transition: transform .25s ease;
     }
 
     .product-card:hover .product-visual {
       transform: translateY(-5px);
-    }
-
-    .product-card:nth-child(4n + 2) .product-visual { background: var(--green); }
-    .product-card:nth-child(4n + 3) .product-visual { background: #d9e1f5; }
-    .product-card:nth-child(4n + 4) .product-visual { background: var(--ink); }
-
-    /* IMAGENS PROVISÓRIAS */
-
-    .product-art {
-      position: relative;
-      width: 76%;
-      height: 76%;
-      display: grid;
-      place-items: center;
-      padding: 18px;
-      background: var(--paper);
-      color: var(--blue);
-      text-align: center;
-      font: 800 clamp(25px, 3vw, 43px)/.88 var(--font-display);
-      letter-spacing: -.08em;
-      box-shadow: 9px 9px 0 rgba(0,0,0,.15);
-      transform: rotate(-4deg);
-    }
-
-    .product-art::after {
-      content: "TORCEDORA";
-      position: absolute;
-      bottom: 12px;
-      left: 0;
-      right: 0;
-      font: 8px var(--font-mono);
-      letter-spacing: .15em;
-    }
-
-    .product-card:nth-child(4n + 2) .product-art {
-      background: var(--blue);
-      color: var(--green);
-      transform: rotate(4deg);
-    }
-
-    .product-card:nth-child(4n + 3) .product-art {
-      background: var(--green);
-      color: var(--ink);
-      transform: rotate(-3deg);
-    }
-
-    .product-card:nth-child(4n + 4) .product-art {
-      background: var(--paper);
-      color: var(--blue);
-      transform: rotate(3deg);
-    }
-
-    .product-tag {
-      position: absolute;
-      top: 13px;
-      left: 13px;
-      z-index: 2;
-      padding: 7px 9px;
-      background: var(--green);
-      color: var(--ink);
-      font: 9px var(--font-mono);
-      text-transform: uppercase;
-    }
-
-    .product-visual-number {
-      position: absolute;
-      right: 12px;
-      bottom: 10px;
-      color: rgba(255,255,255,.8);
-      font: 10px var(--font-mono);
-    }
-
-    .product-card:nth-child(4n + 2) .product-visual-number,
-    .product-card:nth-child(4n + 3) .product-visual-number {
-      color: var(--ink);
     }
 
     .product-meta {
@@ -424,14 +349,7 @@
       display: grid;
       place-items: center;
       padding: 35px;
-      background: var(--blue);
-    }
-
-    .modal-image .product-art {
-      width: 78%;
-      height: auto;
-      min-height: 300px;
-      font-size: clamp(35px, 5vw, 60px);
+      background: var(--white);
     }
 
     .modal-details {
@@ -532,7 +450,6 @@
       .filters { gap: 7px; }
       .filter-button { padding: 9px 11px; font-size: 9px; }
       .product-grid { gap: 28px 12px; }
-      .product-art { font-size: clamp(22px, 6vw, 34px); }
       .product-name { font-size: 11px; }
       .product-price { font-size: 10px; }
 
@@ -553,12 +470,6 @@
       .modal-image {
         min-height: 270px;
         padding: 25px;
-      }
-
-      .modal-image .product-art {
-        min-height: 200px;
-        width: 65%;
-        font-size: 38px;
       }
 
       .modal-details { padding: 30px 25px; }
@@ -604,7 +515,6 @@
 
   <main>
 
-    <!-- PRODUTOS -->
     <section class="catalog" id="vitrine">
 
       <div class="catalog-heading">
@@ -628,11 +538,7 @@
 
         <!-- CAMISETAS -->
         <button class="product-card" data-category="camisetas" data-product="0">
-          <div class="product-visual">
-            <span class="product-tag">Destaque</span>
-            <div class="product-art">CAMISA<br>DE JOGO<br>É ATITUDE.</div>
-            <span class="product-visual-number">01 / 08</span>
-          </div>
+          <div class="product-visual"></div>
           <div class="product-meta">
             <div>
               <span class="product-category">Camiseta</span>
@@ -644,10 +550,7 @@
         </button>
 
         <button class="product-card" data-category="camisetas" data-product="1">
-          <div class="product-visual">
-            <div class="product-art">VAI<br>COM<br>ELAS.</div>
-            <span class="product-visual-number">02 / 08</span>
-          </div>
+          <div class="product-visual"></div>
           <div class="product-meta">
             <div>
               <span class="product-category">Camiseta</span>
@@ -660,11 +563,7 @@
 
         <!-- ADESIVOS -->
         <button class="product-card" data-category="adesivos" data-product="2">
-          <div class="product-visual">
-            <span class="product-tag">Novo</span>
-            <div class="product-art">FUTEBOL<br>É PRA<br>TODAS.</div>
-            <span class="product-visual-number">03 / 08</span>
-          </div>
+          <div class="product-visual"></div>
           <div class="product-meta">
             <div>
               <span class="product-category">Adesivo</span>
@@ -676,10 +575,7 @@
         </button>
 
         <button class="product-card" data-category="adesivos" data-product="3">
-          <div class="product-visual">
-            <div class="product-art">TORCER<br>É COISA<br>SÉRIA.</div>
-            <span class="product-visual-number">04 / 08</span>
-          </div>
+          <div class="product-visual"></div>
           <div class="product-meta">
             <div>
               <span class="product-category">Adesivo</span>
@@ -692,10 +588,7 @@
 
         <!-- PÔSTERES -->
         <button class="product-card" data-category="posteres" data-product="4">
-          <div class="product-visual">
-            <div class="product-art">JOGO<br>NA ALMA.<br>ARTE NA<br>PAREDE.</div>
-            <span class="product-visual-number">05 / 08</span>
-          </div>
+          <div class="product-visual"></div>
           <div class="product-meta">
             <div>
               <span class="product-category">Pôster</span>
@@ -707,11 +600,7 @@
         </button>
 
         <button class="product-card" data-category="posteres" data-product="5">
-          <div class="product-visual">
-            <span class="product-tag">Novo</span>
-            <div class="product-art">ARQUIBANCADA<br>É NOSSA.</div>
-            <span class="product-visual-number">06 / 08</span>
-          </div>
+          <div class="product-visual"></div>
           <div class="product-meta">
             <div>
               <span class="product-category">Pôster</span>
@@ -724,10 +613,7 @@
 
         <!-- ILUSTRAÇÕES -->
         <button class="product-card" data-category="ilustracoes" data-product="6">
-          <div class="product-visual">
-            <div class="product-art">FEITO<br>DE JOGO,<br>TRAÇO E<br>PAIXÃO.</div>
-            <span class="product-visual-number">07 / 08</span>
-          </div>
+          <div class="product-visual"></div>
           <div class="product-meta">
             <div>
               <span class="product-category">Ilustração</span>
@@ -739,11 +625,7 @@
         </button>
 
         <button class="product-card" data-category="ilustracoes" data-product="7">
-          <div class="product-visual">
-            <span class="product-tag">Destaque</span>
-            <div class="product-art">ELAS<br>FAZEM<br>O JOGO.</div>
-            <span class="product-visual-number">08 / 08</span>
-          </div>
+          <div class="product-visual"></div>
           <div class="product-meta">
             <div>
               <span class="product-category">Ilustração</span>
@@ -784,9 +666,7 @@
 
       <button class="modal-close" type="button" aria-label="Fechar janela">×</button>
 
-      <div class="modal-image" id="modal-image">
-        <div class="product-art" id="modal-art">TORCEDORA</div>
-      </div>
+      <div class="modal-image" id="modal-image"></div>
 
       <div class="modal-details">
         <span class="modal-category" id="modal-category">Categoria</span>
@@ -829,56 +709,48 @@
         name: 'Camisa de jogo',
         category: 'Camisetas',
         price: 'R$ 89,90',
-        art: 'CAMISA<br>DE JOGO<br>É ATITUDE.',
         description: 'Uma camiseta autoral para quem carrega o futebol feminino no peito. Conforto, personalidade e paixão pelo jogo.'
       },
       {
         name: 'Vai com elas',
         category: 'Camisetas',
         price: 'R$ 89,90',
-        art: 'VAI<br>COM<br>ELAS.',
         description: 'Uma peça para vestir a torcida e mostrar de que lado você está. Feita para acompanhar você dentro e fora de campo.'
       },
       {
         name: 'É pra todas',
         category: 'Adesivos',
         price: 'R$ 12,00',
-        art: 'FUTEBOL<br>É PRA<br>TODAS.',
         description: 'Um adesivo para espalhar a paixão pelo futebol feminino por aí. Pequeno no tamanho, grande na torcida.'
       },
       {
         name: 'Torcer é coisa séria',
         category: 'Adesivos',
         price: 'R$ 12,00',
-        art: 'TORCER<br>É COISA<br>SÉRIA.',
         description: 'Uma ideia para colar onde quiser e deixar a sua torcida sempre à mostra.'
       },
       {
         name: 'Jogo na alma',
         category: 'Pôsteres',
         price: 'R$ 35,00',
-        art: 'JOGO<br>NA ALMA.<br>ARTE NA<br>PAREDE.',
         description: 'Uma arte autoral para levar a atmosfera do futebol feminino para dentro de casa.'
       },
       {
         name: 'Arquibancada é nossa',
         category: 'Pôsteres',
         price: 'R$ 35,00',
-        art: 'ARQUIBANCADA<br>É NOSSA.',
         description: 'Uma homenagem à energia de quem canta, vibra e faz a arquibancada acontecer.'
       },
       {
         name: 'Traço e paixão',
         category: 'Ilustrações',
         price: 'R$ 45,00',
-        art: 'FEITO<br>DE JOGO,<br>TRAÇO E<br>PAIXÃO.',
         description: 'Ilustração independente inspirada no universo do futebol feminino e em tudo que acontece dentro e fora de campo.'
       },
       {
         name: 'Elas fazem o jogo',
         category: 'Ilustrações',
         price: 'R$ 45,00',
-        art: 'ELAS<br>FAZEM<br>O JOGO.',
         description: 'Uma criação para celebrar quem faz o futebol feminino acontecer, em cada jogada e em cada história.'
       }
     ];
@@ -892,25 +764,20 @@
     function applyFilter(filter) {
       let visibleCount = 0;
 
-      // Atualiza o botão selecionado.
       filterButtons.forEach(button => {
         button.classList.toggle('active', button.dataset.filter === filter);
       });
 
-      // Mostra somente os produtos da categoria escolhida.
       productCards.forEach(card => {
         const matches = filter === 'todos' || card.dataset.category === filter;
-
         card.style.display = matches ? '' : 'none';
 
         if (matches) visibleCount++;
       });
 
-      // Atualiza a quantidade de produtos exibidos.
       productCount.textContent = `${String(visibleCount).padStart(2, '0')} produtos`;
     }
 
-    // Permite trocar de categoria manualmente.
     filterButtons.forEach(button => {
       button.addEventListener('click', () => {
         applyFilter(button.dataset.filter);
@@ -929,8 +796,6 @@
       'ilustracoes'
     ];
 
-    // Se a URL tiver uma categoria válida, aplica o filtro automaticamente.
-    // Caso contrário, mantém todos os produtos visíveis.
     if (validCategories.includes(requestedCategory)) {
       applyFilter(requestedCategory);
     } else {
@@ -941,8 +806,6 @@
 
     const modal = document.getElementById('product-modal');
     const modalClose = document.querySelector('.modal-close');
-    const modalImage = document.getElementById('modal-image');
-    const modalArt = document.getElementById('modal-art');
     const modalCategory = document.getElementById('modal-category');
     const modalTitle = document.getElementById('modal-title');
     const modalPrice = document.getElementById('modal-price');
@@ -955,12 +818,6 @@
       modalTitle.textContent = product.name;
       modalPrice.textContent = product.price;
       modalDescription.textContent = product.description;
-      modalArt.innerHTML = product.art;
-
-      // Mantém a cor da imagem provisória de acordo com o card.
-      const card = document.querySelector(`[data-product="${index}"]`);
-      const cardBackground = getComputedStyle(card.querySelector('.product-visual')).backgroundColor;
-      modalImage.style.background = cardBackground;
 
       modal.classList.add('is-open');
       modal.setAttribute('aria-hidden', 'false');

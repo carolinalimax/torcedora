@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Torcedora — Produtos independentes inspirados no futebol feminino.">
-  <title>TORCEDORA — Vai com elas!</title>
+  <title>TORCEDORA — Vamos com elas!</title>
+
+  <link rel="icon" type="image/png" href="imagens/favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -280,7 +282,14 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 18px;
     }
-    .product-card { min-width: 0; }
+
+    .product-card {
+      min-width: 0;
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
     .product-visual {
       min-height: 310px;
       aspect-ratio: .82;
@@ -336,7 +345,7 @@
     }
     .manifesto h2 {
       max-width: 850px;
-      font: 800 clamp(40px, 6vw, 84px)/.96 var(--font-display);
+      font: 800 clamp(34px, 5vw, 70px)/.96 var(--font-display);
       letter-spacing: -.08em;
       text-transform: uppercase;
     }
@@ -561,7 +570,7 @@
 
 <body>
   <div class="announcement">
-    <span>Futebol feminino em primeiro plano</span>
+    <span>Futebol feminino no topo</span>
     <span aria-hidden="true">✳</span>
     <span>Feito por quem torce</span>
   </div>
@@ -576,7 +585,7 @@
 
       <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
         <a href="#inicio">Home</a>
-        <a href="#produtos">Produtos</a>
+        <a href="produtos.html">Produtos</a>
         <a href="#sobre-marca">Sobre a marca</a>
       </nav>
 
@@ -596,13 +605,13 @@
           Camisetas, adesivos, pôsteres e ideias para usar — e espalhar —
           a paixão pelo jogo.
         </p>
-        <a class="button-primary" href="#produtos">Conheça os produtos <span aria-hidden="true">↗</span></a>
+        <a class="button-primary" href="produtos.html">Conheça os produtos <span aria-hidden="true">↗</span></a>
       </div>
 
       <div class="hero-art">
         <img
-          src="imagens/modelo%20home.png"
-          alt="Modelo vestindo camiseta autoral da Torcedora"
+          src="imagens/modelo.png"
+          alt="Modelo mulher vestindo camiseta autoral da Torcedora"
           class="hero-image"
         >
         <div class="art-sticker">Novo Drop<br>em breve</div>
@@ -611,8 +620,8 @@
 
     <div class="ticker" aria-label="bla bla bla bla bla">
       <div class="ticker-track" aria-hidden="true">
-        <span>Futebol é pra todas <b>✳</b> Vai com elas <b>✳</b> Não é só sobre o jogo <b>✳</b> Futebol é pra todas <b>✳</b> Vai com elas <b>✳</b> Não é só sobre o jogo <b>✳</b></span>
-        <span>Futebol é pra todas <b>✳</b> Vai com elas <b>✳</b> Não é só sobre o jogo <b>✳</b> Futebol é pra todas <b>✳</b> Vai com elas <b>✳</b> Não é só sobre o jogo <b>✳</b></span>
+        <span>Futebol é pra todos <b>✳</b> Vamos com elas <b>✳</b> Não é só sobre o jogo <b>✳</b> Futebol é pra todos <b>✳</b> Vamos com elas <b>✳</b> Não é só sobre o jogo <b>✳</b></span>
+        <span>Futebol é pra todos <b>✳</b> Vamos com elas <b>✳</b> Não é só sobre o jogo <b>✳</b> Futebol é pra todos <b>✳</b> Vamos com elas <b>✳</b> Não é só sobre o jogo <b>✳</b></span>
       </div>
     </div>
 
@@ -624,7 +633,8 @@
       </div>
 
       <div class="product-grid">
-        <article class="product-card reveal">
+
+        <a class="product-card reveal" href="produtos.html?categoria=camisetas">
           <div class="product-visual">
             <div class="product-graphic">CAMISA<br>DE JOGO<br>É ATITUDE.</div>
           </div>
@@ -632,9 +642,9 @@
             <h3 class="product-name">Camisetas</h3>
             <span class="product-arrow" aria-hidden="true">↗</span>
           </div>
-        </article>
+        </a>
 
-        <article class="product-card reveal">
+        <a class="product-card reveal" href="produtos.html?categoria=adesivos">
           <div class="product-visual">
             <div class="product-graphic">ESPALHE<br>O AMOR<br>PELO JOGO.</div>
           </div>
@@ -642,9 +652,9 @@
             <h3 class="product-name">Adesivos</h3>
             <span class="product-arrow" aria-hidden="true">↗</span>
           </div>
-        </article>
+        </a>
 
-        <article class="product-card reveal">
+        <a class="product-card reveal" href="produtos.html?categoria=posteres">
           <div class="product-visual">
             <div class="product-graphic">ARTE<br>NA PAREDE.<br>JOGO NA ALMA.</div>
           </div>
@@ -652,9 +662,9 @@
             <h3 class="product-name">Pôsteres</h3>
             <span class="product-arrow" aria-hidden="true">↗</span>
           </div>
-        </article>
+        </a>
 
-        <article class="product-card reveal">
+        <a class="product-card reveal" href="produtos.html?categoria=ilustracoes">
           <div class="product-visual">
             <div class="product-graphic">FEITO<br>DE JOGO,<br>TRAÇO E PAIXÃO.</div>
           </div>
@@ -662,7 +672,8 @@
             <h3 class="product-name">Ilustrações</h3>
             <span class="product-arrow" aria-hidden="true">↗</span>
           </div>
-        </article>
+        </a>
+
       </div>
     </section>
 
